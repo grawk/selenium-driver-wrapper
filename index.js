@@ -11,6 +11,9 @@ driverWrapper.prototype = {
 	find: function(locator, el) {
 		return (el ? el : this.driver).findElement(this.by(locator));
 	},
+	finds: function(locator, el) {
+		return (el ? el : this.driver).findElements(this.by(locator));
+	},
 	present: function(locator, el) {
 		return (el ? el : this.driver).isElementPresent(this.by(locator));
 	},
