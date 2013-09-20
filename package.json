@@ -41,7 +41,7 @@
   "devDependencies": {
     "grunt": "0.4.x",
     "grunt-contrib-jshint": "0.1.x",
-    "selenium-webdriver": "~2.35.x",
+    "selenium-webdriver": "~2.35.x"
   },
   "peerDependencies": {
     "grunt": "~0.4.1"
