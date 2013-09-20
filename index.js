@@ -8,11 +8,11 @@ function driverWrapper(driver) {
 }
 
 driverWrapper.prototype = {
-	find: function(locator) {
-		return this.driver.findElement(this.by(locator));
+	find: function(locator, el) {
+		return (el ? el : this.driver).findElement(this.by(locator));
 	},
-	present: function(locator) {
-		return this.driver.isElementPresent(this.by(locator));
+	present: function(locator, el) {
+		return (el ? el : this.driver).isElementPresent(this.by(locator));
 	},
 	by: function(locator) {
 		return wd.By[locator.type](locator.locator);
